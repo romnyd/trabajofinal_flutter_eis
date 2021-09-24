@@ -4,6 +4,7 @@ import 'package:flutter/widgets.dart';
 import 'package:leyendapps/data.dart';
 
 import 'constants.dart';
+import 'detail_page.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -67,6 +68,14 @@ class _HomePageState extends State<HomePage> {
                     return InkWell(
                       onTap: () {
                         //pendiente navegar a la pantalla de detalle
+                        Navigator.push(
+                          context,
+                          PageRouteBuilder(
+                            pageBuilder: (context, a, b) => DetailPage(
+                              leyendasInfo: leyendas[index],
+                            ),
+                          ),
+                        );
                       },
                       child: Stack(
                         children: <Widget>[
