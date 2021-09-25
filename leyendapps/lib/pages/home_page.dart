@@ -151,8 +151,9 @@ class _HomePageState extends State<HomePage> {
                                               ),
                                               Text(
                                                 leyendas[index]
-                                                    .description
-                                                    .substring(1, 80),
+                                                        .description
+                                                        .substring(1, 80) +
+                                                    "...",
                                                 style: TextStyle(
                                                   fontFamily: 'Avenir',
                                                   fontSize: 15,
@@ -187,10 +188,16 @@ class _HomePageState extends State<HomePage> {
                                       ),
                                     ],
                                   ),
-                                  Hero(
-                                    tag: leyendas[index].position,
-                                    child:
-                                        Image.asset(leyendas[index].iconImage),
+                                  Container(
+                                    margin: EdgeInsets.fromLTRB(60, 0, 0, 270),
+                                    child: Hero(
+                                      tag: leyendas[index].position,
+                                      child: Image.asset(
+                                        leyendas[index].iconImage,
+                                        width: 250,
+                                        height: 300,
+                                      ),
+                                    ),
                                   ),
                                   Positioned(
                                     right: 24,

@@ -49,8 +49,6 @@ class DetailPage extends StatelessWidget {
                         SizedBox(height: 32),
                         Text(
                           leyendasInfo.description ?? '',
-                          maxLines: 5,
-                          overflow: TextOverflow.ellipsis,
                           style: TextStyle(
                             fontFamily: 'Avenir',
                             fontSize: 20,
@@ -58,53 +56,21 @@ class DetailPage extends StatelessWidget {
                             fontWeight: FontWeight.w500,
                           ),
                         ),
-                        SizedBox(height: 32),
-                        Divider(color: Colors.black38),
                       ],
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 32.0),
-                    child: Text(
-                      'Galeria',
-                      style: TextStyle(
-                        fontFamily: 'Avenir',
-                        fontSize: 25,
-                        color: const Color(0xff47455f),
-                        fontWeight: FontWeight.w300,
-                      ),
-                      textAlign: TextAlign.left,
-                    ),
-                  ),
-                  Container(
-                    height: 250,
-                    padding: const EdgeInsets.only(left: 32.0),
-                    child: ListView.builder(
-                        itemCount: leyendasInfo.iconImage.length,
-                        scrollDirection: Axis.horizontal,
-                        itemBuilder: (context, index) {
-                          return Card(
-                            clipBehavior: Clip.antiAlias,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(24),
-                            ),
-                            child: AspectRatio(
-                                aspectRatio: 1,
-                                child: Image.network(
-                                  leyendasInfo.iconImage[index],
-                                  fit: BoxFit.cover,
-                                )),
-                          );
-                        }),
                   ),
                 ],
               ),
             ),
             Positioned(
-              right: -64,
+              right: -40,
               child: Hero(
-                  tag: leyendasInfo.position,
-                  child: Image.asset(leyendasInfo.iconImage)),
+                tag: leyendasInfo.position,
+                child: Image.asset(
+                  leyendasInfo.iconImage,
+                  height: 350,
+                ),
+              ),
             ),
             Positioned(
               top: 60,
