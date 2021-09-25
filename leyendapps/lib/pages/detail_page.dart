@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:leyendapps/data.dart';
+import 'package:leyendapps/models/LeyendasInfo.dart';
 import 'constants.dart';
 
 class DetailPage extends StatelessWidget {
@@ -65,7 +66,7 @@ class DetailPage extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(left: 32.0),
                     child: Text(
-                      'Gallery',
+                      'Galeria',
                       style: TextStyle(
                         fontFamily: 'Avenir',
                         fontSize: 25,

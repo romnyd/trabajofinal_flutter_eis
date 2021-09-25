@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "795149365101",
+    "firebase_url": "https://trabajoeis-default-rtdb.firebaseio.com",
+    "project_id": "trabajoeis",
+    "storage_bucket": "trabajoeis.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:795149365101:android:ae15f62d0d912743133464",
+        "android_client_info": {
+          "package_name": "com.example.leyendapps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "795149365101-0f9526l0hsv5n12bhuuklspcq121pdgf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcAoi0PDqEnPuYk9-c1271nOxrab6I6jE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "795149365101-0f9526l0hsv5n12bhuuklspcq121pdgf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
