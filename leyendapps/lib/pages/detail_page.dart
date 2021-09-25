@@ -67,8 +67,8 @@ class DetailPage extends StatelessWidget {
                 tag: leyendasInfo.position,
                 child: Image.network(
                   leyendasInfo.iconImage,
-                  width: 250,
-                  height: 300,
+                  height: 360,
+                  width: 320,
                 ),
               ),
             ),
