@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:leyendapps/data.dart';
 import 'package:leyendapps/models/LeyendasInfo.dart';
 import 'constants.dart';
 
@@ -66,9 +65,10 @@ class DetailPage extends StatelessWidget {
               right: -40,
               child: Hero(
                 tag: leyendasInfo.position,
-                child: Image.asset(
+                child: Image.network(
                   leyendasInfo.iconImage,
-                  height: 350,
+                  width: 250,
+                  height: 300,
                 ),
               ),
             ),

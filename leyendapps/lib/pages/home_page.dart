@@ -192,7 +192,7 @@ class _HomePageState extends State<HomePage> {
                                     margin: EdgeInsets.fromLTRB(60, 0, 0, 270),
                                     child: Hero(
                                       tag: leyendas[index].position,
-                                      child: Image.asset(
+                                      child: Image.network(
                                         leyendas[index].iconImage,
                                         width: 250,
                                         height: 300,
