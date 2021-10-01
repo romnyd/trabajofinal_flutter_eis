@@ -23,7 +23,17 @@ class DetailPage extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        SizedBox(height: 300),
+                        Positioned(
+                          right: -70,
+                          child: Hero(
+                            tag: leyendasInfo.position,
+                            child: Image.network(
+                              leyendasInfo.iconImage,
+                              height: 360,
+                              width: 320,
+                            ),
+                          ),
+                        ),
                         Text(
                           leyendasInfo.name,
                           style: TextStyle(
@@ -47,7 +57,7 @@ class DetailPage extends StatelessWidget {
                         Divider(color: Colors.black38),
                         SizedBox(height: 32),
                         Text(
-                          leyendasInfo.description ?? '',
+                          leyendasInfo.description,
                           style: TextStyle(
                             fontFamily: 'Avenir',
                             fontSize: 20,
@@ -59,17 +69,6 @@ class DetailPage extends StatelessWidget {
                     ),
                   ),
                 ],
-              ),
-            ),
-            Positioned(
-              right: -40,
-              child: Hero(
-                tag: leyendasInfo.position,
-                child: Image.network(
-                  leyendasInfo.iconImage,
-                  height: 360,
-                  width: 320,
-                ),
               ),
             ),
             Positioned(
