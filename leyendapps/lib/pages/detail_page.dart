@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:leyendapps/models/LeyendasInfo.dart';
 import 'constants.dart';
+import 'package:flutter_share/flutter_share.dart';
 
 class DetailPage extends StatelessWidget {
   final LeyendasInfo leyendasInfo;
@@ -23,15 +24,12 @@ class DetailPage extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        Positioned(
-                          right: -70,
-                          child: Hero(
-                            tag: leyendasInfo.position,
-                            child: Image.network(
-                              leyendasInfo.iconImage,
-                              height: 360,
-                              width: 320,
-                            ),
+                        Hero(
+                          tag: leyendasInfo.position,
+                          child: Image.network(
+                            leyendasInfo.iconImage,
+                            height: 360,
+                            width: 320,
                           ),
                         ),
                         Text(
@@ -94,6 +92,17 @@ class DetailPage extends StatelessWidget {
           ],
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.share),
+        onPressed: share,
+      ),
     );
+  }
+
+  Future<void> share() async {
+    await FlutterShare.share(
+        title: leyendasInfo.name,
+        text: leyendasInfo.description,
+        chooserTitle: leyendasInfo.name);
   }
 }
